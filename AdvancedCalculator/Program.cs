@@ -10,5 +10,12 @@ namespace AdvancedCalculator
         static void Main()
         {
         }
+        static string ReadFile() //Чтение из файла
+        {
+            string path = Environment.CurrentDirectory + "\\text.txt";
+            string text = File.ReadAllText(path);
+            return text;
+        }
+
     }
 }
