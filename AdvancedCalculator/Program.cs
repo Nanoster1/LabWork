@@ -114,10 +114,10 @@ namespace AdvancedCalculator
                 {
                     while (!IsOp(text[i]))
                     {
-                        if (text.Length - i >= 3 && text[i + 1] == ',' && IsDigit(text[i + 2]))
-                        {
-                            output += text[i] + text[i + 1] + text[i + 2];
-                            i += 2;
+                        if (text.Length - i >= 3 && text[i + 1] == ',')
+                        { 
+                            output += text[i].ToString() + text[i + 1].ToString();
+                            i ++;
                         }
                         else
                         {
@@ -168,10 +168,10 @@ namespace AdvancedCalculator
                     string tempNum = "";
                     while (!IsOp(text[i]) && text[i] != ' ')
                     {
-                        if (text.Length - i >= 3 && text[i + 1] == ',' && IsDigit(text[i + 2]))
+                        if (text.Length - i >= 3 && text[i + 1] == ',')
                         {
-                            tempNum += text[i] + text[i + 1] + text[i + 2];
-                            i += 2;
+                            tempNum += text[i].ToString() + text[i + 1].ToString();
+                            i++;
                         }
                         else
                         {
